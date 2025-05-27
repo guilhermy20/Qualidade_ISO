@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Normas de Qualidade</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Estilos específicos para a página de normas */
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 50px auto;
+    }
+    
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #004d99;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+      border-radius: 3px;
+    }
+    
+    .container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+    
+    .container::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background-color: white;
+      border: 4px solid #004d99;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    .left {
+      left: 0;
+    }
+    
+    .right {
+      left: 50%;
+    }
+    
+    .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid white;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent white;
+    }
+    
+    .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+    
+    .right::after {
+      left: -10px;
+    }
+    
+    .content {
+      padding: 20px 30px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .content h3 {
+      color: #004d99;
+      margin-top: 0;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.9em;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    table thead tr {
+      background-color: #004d99;
+      color: #ffffff;
+      text-align: left;
+    }
+
+    table th,
+    table td {
+      padding: 12px 15px;
+    }
+
+    table tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+
+    table tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+
+    table tbody tr:last-of-type {
+      border-bottom: 2px solid #004d99;
+    }
+    
+    .comparison-section {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+    }
+    
+    /* Responsivo para dispositivos menores */
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 31px;
+      }
+      
+      .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      
+      .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+      
+      .left::after, .right::after {
+        left: 15px;
+      }
+      
+      .right {
+        left: 0%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="iso.html">ISO 25010</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="historico.html">Histórico</a>
+    <a href="normas.html">Normas</a>
+  </nav>
+  
+  <main>
+    <h1>Normas de Qualidade de Software</h1>
+    
+    <div class="comparison-section">
+      <h2>Comparação entre as Normas</h2>
+      <p>As normas ISO relacionadas à qualidade de software evoluíram ao longo do tempo, cada uma com suas particularidades e focos específicos. Abaixo apresentamos uma comparação detalhada entre as três principais normas:</p>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Característica</th>
+            <th>ISO 9001</th>
+            <th>ISO 9126</th>
+            <th>ISO 25010</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Ano de lançamento</strong></td>
+            <td>1987 (última revisão em 2015)</td>
+            <td>1991 (revisada em 2001)</td>
+            <td>2011 (substituiu a ISO 9126)</td>
+          </tr>
+          <tr>
+            <td><strong>Objetivo</strong></td>
+            <td>Gestão da qualidade organizacional em geral</td>
+            <td>Primeira norma focada especificamente na qualidade de produto de software</td>
+            <td>Evolução da ISO 9126, modelo mais robusto e atual para avaliação de qualidade de software</td>
+          </tr>
+          <tr>
+            <td><strong>Aplicação</strong></td>
+            <td>Aplicável a qualquer organização, independente do setor (software é apenas um dos possíveis produtos)</td>
+            <td>Específica para produtos de software, com foco em seis características principais</td>
+            <td>Específica para produtos de software e sistemas, com um modelo mais completo de oito características</td>
+          </tr>
+          <tr>
+            <td><strong>Diferencial</strong></td>
+            <td>Foco em processos e sistemas de gestão</td>
+            <td>Introduziu as primeiras métricas específicas para software</td>
+            <td>Maior ênfase em segurança, compatibilidade e está alinhada com necessidades modernas de software</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <h2>Evolução das Normas de Qualidade</h2>
+    <p>A qualidade de software passou por uma evolução significativa ao longo das décadas, com marcos importantes que moldaram as práticas atuais:</p>
+    
+    <div class="timeline">
+      <div class="container left">
+        <div class="content">
+          <h3>1980s</h3>
+          <p>Início das preocupações com qualidade de software de forma sistemática. Lançamento da ISO 9001 em 1987, primeiro padrão genérico de gestão da qualidade.</p>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h3>1991</h3>
+          <p>Publicação da ISO 9126, primeira norma internacional focada especificamente na qualidade de produtos de software, definindo seis características principais: funcionalidade, confiabilidade, usabilidade, eficiência, manutenibilidade e portabilidade.</p>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <h3>2001</h3>
+          <p>Revisão da ISO 9126, expandindo o modelo com subcaracterísticas e métricas mais detalhadas para avaliação de software.</p>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h3>2005</h3>
+          <p>Início do desenvolvimento da série SQuaRE (Software Quality Requirements and Evaluation), que viria a substituir as normas ISO 9126 e ISO 14598.</p>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <h3>2011</h3>
+          <p>Lançamento da ISO 25010 como parte da série SQuaRE, substituindo a ISO 9126 e apresentando um modelo mais abrangente com oito características de qualidade.</p>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h3>2015</h3>
+          <p>Revisão da ISO 9001, atualizando os requisitos de gestão da qualidade para todas as organizações, incluindo princípios como foco no cliente e melhoria contínua, impactando indiretamente o desenvolvimento de software.</p>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <h3>Presente</h3>
+          <p>Aplicação crescente dos modelos de qualidade em práticas modernas como DevOps, metodologias ágeis e integração contínua, com maior ênfase em segurança cibernética e compatibilidade entre sistemas.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="comparison-section">
+      <h2>Importância da Evolução das Normas</h2>
+      <p>A evolução das normas ISO reflete as mudanças nas necessidades e prioridades da indústria de software ao longo do tempo:</p>
+      <ul>
+        <li>A ISO 9001 estabeleceu as bases para a gestão da qualidade em geral</li>
+        <li>A ISO 9126 trouxe o foco específico para produtos de software</li>
+        <li>A ISO 25010 adaptou os critérios para a realidade moderna dos sistemas de software, incluindo novos aspectos como segurança e compatibilidade</li>
+      </ul>
+      <p>Esta evolução foi crucial para acompanhar as mudanças tecnológicas e as crescentes demandas por sistemas de software confiáveis, seguros e eficientes no mundo atual.</p>
+    </div>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>

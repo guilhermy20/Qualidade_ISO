@@ -1,0 +1,128 @@
+/* style.css */
+body {
+    font-family: 'Montserrat', sans-serif;;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+    color: #333;
+  }
+  
+  nav {
+    background-color: #004d99;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  nav a {
+    color: #fff;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ffcc00;
+  }
+  
+  main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #00264d;
+    margin-bottom: 30px;
+  }
+  
+  p {
+    line-height: 1.6;
+    font-size: 1.1em;
+  }
+  
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  article {
+    background: #ffffff;
+    padding: 20px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  article img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  figure img {
+    border: 3px solid #004d99;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #004d99;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #003366;
+  }
+  
+  .tema-escuro {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+  }
+  
+  .tema-escuro nav {
+    background-color: #000;
+  }
+  
+  .tema-escuro main,
+  .tema-escuro article {
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+  }
+  
+  .tema-escuro nav a:hover {
+    color: #66ccff;
+  }
+  
