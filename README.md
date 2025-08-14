@@ -1,0 +1,1 @@
+A ISO/IEC 25010 é uma norma internacional que define critérios para avaliação da qualidade de produtos de software, permitindo uma melhor análise de desempenho, segurança, usabilidade e outros aspectos. Um site motando para realização Superior de Tecnologia em Sistemas para Internet 
